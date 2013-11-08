@@ -1,4 +1,4 @@
-export DOTFILES="$HOME/dotfiles"
+export DOTFILES="$HOME/Code/dotfiles"
 
 ln -sf $DOTFILES/bashrc $HOME/.bashrc
 ln -sf $DOTFILES/gitconfig $HOME/.gitconfig

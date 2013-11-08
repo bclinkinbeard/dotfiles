@@ -1,4 +1,4 @@
-export DOTFILES="$HOME/dotfiles"
+export DOTFILES="$HOME/Code/dotfiles"
 
 for config_file ($DOTFILES/{aliases,colors,exports,functions}) source $config_file
 
