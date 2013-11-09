@@ -1,5 +1,5 @@
 # Editor prefs
-export EDITOR=vim
+export EDITOR=mate
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -12,9 +12,6 @@ export LESS_TERMCAP_md="$ORANGE"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
-# RBEnv
-export PATH="$HOME/.rbenv/bin:$PATH"
-
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
@@ -26,10 +23,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Custom Executables: e.g. 'subl'
 export PATH="$HOME/.bin:$PATH"
 
-# Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# NPM
+# npm
 export PATH="/usr/local/share/npm/bin:$PATH"
 
 # Node
