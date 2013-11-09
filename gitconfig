@@ -17,7 +17,7 @@
     keepBackup = false
     tool = opendiff
 [github]
-    user = kevinSuttle
+    user = bclinkinbeard
 [help]
     autocorrect = 1
 [hub]
@@ -28,7 +28,7 @@
 [push]
     default = simple
 [user]
-    email = kevin@kevinsuttle.com
-    name = Kevin Suttle
+    email = ben.clinkinbeard@gmail.com
+    name = Ben Clinkinbeard
 [mergetool]
     keepBackup = false
