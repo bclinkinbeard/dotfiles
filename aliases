@@ -34,6 +34,7 @@ alias mkcd="mkdir -p && cd $_"
 
 # Application Shortcuts
 alias v="vim"
+alias subl="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
 
 # Commands
 alias jsw="jekyll serve --watch"

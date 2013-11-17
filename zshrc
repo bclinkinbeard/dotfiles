@@ -37,5 +37,8 @@ setopt CORRECT CORRECT_ALL
 # Enable extended globbing
 setopt EXTENDED_GLOB
 
+# Grunt tab completion
+eval "$(grunt --completion=zsh)"
+
 # Source Pure.zsh
 source $DOTFILES/pure/pure.zsh

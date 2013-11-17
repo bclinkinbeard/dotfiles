@@ -1,3 +1,8 @@
+[user]
+	name = Ben Clinkinbeard
+	email = ben.clinkinbeard@gmail.com
+[github]
+    user = bclinkinbeard
 [color]
     branch = true
     diff = true
@@ -8,16 +13,26 @@
     ui = true
 [core]
     autocrlf = input
-    editor = vim
-    excludesfile = ~/.gitignore
+    editor = mate
+	excludesfile = /Users/bclinkinbeard/.gitignore
     whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
+[alias]
+  st = status -sb
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+[pull]
+	rebase = true
+[push]
+	default = current
+[rerere]
+	enabled = true
 [credential]
     helper = osxkeychain
 [diff]
     keepBackup = false
     tool = opendiff
-[github]
-    user = bclinkinbeard
 [help]
     autocorrect = 1
 [hub]
@@ -25,10 +40,11 @@
 [merge]
     keepBackup = false
     tool = opendiff
-[push]
-    default = simple
-[user]
-    email = ben.clinkinbeard@gmail.com
-    name = Ben Clinkinbeard
 [mergetool]
     keepBackup = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
