@@ -23,6 +23,10 @@ alias gs="git status --short --branch"
 alias gt="git tag"
 alias gu="git reset --soft 'HEAD^'" # Think "un-stage"
 
+# npm
+alias npmvp="npm version patch -m 'v%s'"
+alias npmvm="npm version minor -m 'v%s'"
+
 # List files, including hidden ones
 alias l="ls -aF"
 
