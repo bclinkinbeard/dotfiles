@@ -1,10 +1,14 @@
 export DOTFILES="$HOME/Code/dotfiles"
+export PATH="$PATH:./node_modules/.bin"
 
 for config_file ($DOTFILES/{aliases,colors,exports,functions}) source $config_file
 
 # Completions
 autoload -U promptinit
 promptinit
+
+autoload -U compinit
+compinit
 
 # Prompt Functions
 precmd() {
@@ -37,8 +41,10 @@ setopt CORRECT CORRECT_ALL
 # Enable extended globbing
 setopt EXTENDED_GLOB
 
-# Grunt tab completion
-eval "$(grunt --completion=zsh)"
-
 # Source Pure.zsh
 source $DOTFILES/pure/pure.zsh
+
+# Increase file limit
+ulimit -n 2048
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

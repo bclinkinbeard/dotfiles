@@ -1,4 +1,5 @@
 export DOTFILES="$HOME/Code/dotfiles"
+export PATH="$PATH:./node_modules/.bin"
 
 for file in $DOTFILES/{aliases,colors,exports,functions}; do
     [ -r "$file" ] && source "$file"
@@ -10,3 +11,5 @@ function parse_git_branch {
 }
 
 export PS1="\w \$(parse_git_branch) \@\n$ "
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

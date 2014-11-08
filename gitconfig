@@ -14,7 +14,7 @@
 [core]
     autocrlf = input
     editor = mate
-	excludesfile = /Users/bclinkinbeard/.gitignore
+	excludesfile = /Users/ben/.gitignore
     whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
 [alias]
   st = status -sb
@@ -23,7 +23,7 @@
   co = checkout
   df = diff
 [pull]
-	rebase = true
+	rebase = false
 [push]
 	default = current
 [rerere]

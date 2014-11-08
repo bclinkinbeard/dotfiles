@@ -1,5 +1,5 @@
 # Wrap git with hub
-if [[ -f `command -v hub` ]] ; then alias git=hub ; fi
+#if [[ -f `command -v hub` ]] ; then alias git=hub ; fi
 
 # Git aliases, because who wants to type 'git' every time?
 alias ga="git add"
@@ -24,8 +24,11 @@ alias gt="git tag"
 alias gu="git reset --soft 'HEAD^'" # Think "un-stage"
 
 # npm
-alias npmvp="npm version patch -m 'v%s'"
-alias npmvm="npm version minor -m 'v%s'"
+alias npmvp="npm version patch"
+alias npmvm="npm version minor"
+alias npmls="npm ls --depth 0"
+alias pushall="git push && git push --tags"
+alias shipit="git push && git push --tags && npm publish"
 
 # List files, including hidden ones
 alias l="ls -aF"
