@@ -29,9 +29,14 @@ alias npmvm="npm version minor"
 alias npmls="npm ls --depth 0"
 alias pushall="git push && git push --tags"
 alias shipit="git push && git push --tags && npm publish"
+alias work="stree && code . && npm start"
 
 # List files, including hidden ones
 alias l="ls -aF"
+
+# Show and hide hidden files
+alias showFiles="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
+alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app"
 
 # Easier navigation: Thanks @mathiasbynens, @gf3, et al.
 alias ..="cd .."

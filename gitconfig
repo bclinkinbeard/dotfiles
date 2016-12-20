@@ -14,7 +14,7 @@
 [core]
     autocrlf = input
     editor = mate
-	excludesfile = /Users/ben/.gitignore
+	excludesfile = /Users/ben/.gitignore_global
     whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
 [alias]
   st = status -sb
@@ -26,6 +26,7 @@
 	rebase = false
 [push]
 	default = current
+	followTags = true
 [rerere]
 	enabled = true
 [credential]
@@ -43,8 +44,18 @@
 [mergetool]
     keepBackup = false
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[commit]
+	template = /Users/ben/.stCommitMsg

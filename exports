@@ -28,3 +28,6 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 # Node
 export NODE_PATH="/usr/local/bin/node"
+
+# Calibre
+export PATH="/Applications/calibre.app/Contents/MacOS:$PATH"

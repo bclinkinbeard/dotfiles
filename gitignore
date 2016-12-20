@@ -15,4 +15,6 @@ Thumbs.db
 .Trashes
 
 # JetBrains editors
-.idea
+.idea/
+
+node_modules/
