@@ -1,5 +1,6 @@
 export DOTFILES="$HOME/Code/dotfiles"
 export PATH="$PATH:./node_modules/.bin"
+export PATH="$PATH:$DOTFILES/funcs"
 
 for config_file ($DOTFILES/{aliases,colors,exports,functions}) source $config_file
 

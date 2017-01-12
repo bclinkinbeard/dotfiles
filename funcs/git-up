@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# This is a short cut that aliases `git up [target]` to:
+#     1. checkout $target (defaults to master)
+#     2. do a `git pull -r`
+#     3. switch back to your previous branch
+#     4. do a `git rebase $target`
+
+BRANCH="$(git symbolic-ref HEAD 2>/dev/null)" ||
+BRANCH="(unnamed branch)"     # detached HEAD
+BRANCH=${BRANCH##refs/heads/}
+
+if [ -z "$1" ]; then
+	TARGET="master"
+else
+	TARGET="$1"
+fi
+
+git checkout "$TARGET" && \
+git pull -r && \
+git checkout "$BRANCH" && \
+git rebase --preserve-merges "$TARGET"
