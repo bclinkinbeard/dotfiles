@@ -13,7 +13,7 @@
     ui = true
 [core]
     autocrlf = input
-    editor = mate
+	editor = vim
 	excludesfile = /Users/bclinkinbeard/.gitignore_global
     whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
 [alias]

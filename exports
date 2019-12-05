@@ -1,5 +1,6 @@
 # Editor prefs
-export EDITOR=mate
+export VISUAL=vim
+export EDITOR="$VISUAL"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -13,9 +14,9 @@ export LESS_TERMCAP_md="$ORANGE"
 export MANPAGER="less -X"
 
 # Homebrew
+export PATH="/usr/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/bin:$PATH"
 
 # Homebrew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -26,8 +27,17 @@ export PATH="$HOME/.bin:$PATH"
 # npm
 export PATH="/usr/local/share/npm/bin:$PATH"
 
+# yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
 # Node
 export NODE_PATH="/usr/local/bin/node"
 
 # Calibre
 export PATH="/Applications/calibre.app/Contents/MacOS:$PATH"
+
+# Python
+export PATH="/Users/bclinkinbeard/Library/Python/3.7/bin:$PATH"
+
+# Go
+export PATH="/Users/bclinkinbeard/go/bin:$PATH"
