@@ -1,9 +1,9 @@
 export DOTFILES="$HOME/Code/dotfiles"
 export PATH="$DOTFILES/funcs:$PATH"
 export PATH="./node_modules/.bin:$PATH"
-
 for config_file ($DOTFILES/{aliases,colors,exports,functions}) source $config_file
 
+ZSH_DISABLE_COMPFIX="true"
 # Completions
 autoload -U promptinit
 promptinit

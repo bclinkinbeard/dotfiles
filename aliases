@@ -74,3 +74,9 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 
 # MASSIVE CLEANUP
 alias CLEAN_HOUSE="flush; lscleanup; removeDS; emptytrash"
+
+alias gpush="git push origin HEAD:refs/for/main"
+alias gwip="git push origin HEAD:refs/for/main%wip"
+alias gci="git ci --amend --no-edit"
+alias gmain="git co main && git pull"
+alias grebase="git stash && git fetch origin main && git rebase origin/main && git stash apply"
