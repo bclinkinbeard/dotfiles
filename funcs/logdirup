@@ -1,0 +1,7 @@
+#!/bin/bash
+
+arr=(${1//\// })
+len="${#arr[@]}"
+dir="${arr[len-1]}"
+
+scp -r "$1" bclinkinbear@10.111.62.28:/home/bclinkinbear/ddb-logs/"$dir"

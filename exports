@@ -37,7 +37,9 @@ export NODE_PATH="/usr/local/bin/node"
 export PATH="/Applications/calibre.app/Contents/MacOS:$PATH"
 
 # Python
-export PATH="/Users/bclinkinbeard/Library/Python/3.7/bin:$PATH"
+export PATH="$HOME/Library/Python/3.7/bin:$PATH"
 
 # Go
-export PATH="/Users/bclinkinbeard/go/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+
+export PATH="$PATH:$HOME/bin"

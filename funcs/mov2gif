@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	echo "You must provide a .mov name"
+else
+	TARGET="$1"
+fi
+
+ffmpeg -i "$TARGET.mov" \
+  -vf "setpts=PTS/1.5,fps=10,scale=800:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" \
+  -loop 0 "$TARGET.gif"

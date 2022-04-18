@@ -1,6 +1,6 @@
 [user]
 	name = Ben Clinkinbeard
-	email = ben.clinkinbeard@gmail.com
+	email = bclinkinbear@nvidia.com
 [github]
     user = bclinkinbeard
 [color]
@@ -14,7 +14,7 @@
 [core]
     autocrlf = input
 	editor = vim
-	excludesfile = /Users/bclinkinbeard/.gitignore_global
+	excludesfile = /Users/bclinkinbear/.gitignore_global
     whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
 [alias]
   st = status -sb
@@ -30,7 +30,7 @@
 [rerere]
 	enabled = true
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 [diff]
     keepBackup = false
     tool = opendiff
@@ -45,17 +45,16 @@
     keepBackup = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "media"]
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
-[commit]
-	template = /Users/ben/.stCommitMsg
